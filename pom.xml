@@ -257,6 +257,7 @@
             <groupId>io.bit3</groupId>
             <artifactId>jsass</artifactId>
             <version>5.10.3</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -355,12 +356,12 @@
                             </goals>
                             <configuration>
                                 <bnd><![CDATA[
-Bundle-Category: the-olymp
+-includeresource: lib/jsass.jar=jsass-*.jar;lib:=true,lib/mjson.jar=mjson-*.jar;lib:=true,lib/commons-text.jar=commons-text-*.jar;lib:=true
+Bundle-Category: aem-sass-compiler
 -exportcontents: ${packages;VERSIONED}
-Sling-Model-Packages: com.bmw.bmwweb.core.models
--snapshot: ${tstamp;yyyyMMddHHmmssSSS}
 Bundle-DocURL:
                                 ]]></bnd>
+
                             </configuration>
                         </execution>
                     </executions>
@@ -388,6 +389,7 @@ Bundle-DocURL:
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <configuration>
+
                         <archive>
                             <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
                         </archive>
