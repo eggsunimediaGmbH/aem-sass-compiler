@@ -1,11 +1,9 @@
 package com.github.mickleroy.aem.sass.util;
 
-
 import com.adobe.granite.ui.clientlibs.script.ScriptResource;
 import junitx.framework.Assert;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.CharEncoding;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +16,6 @@ import org.mockito.quality.Strictness;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 
 import static org.mockito.Mockito.when;
 

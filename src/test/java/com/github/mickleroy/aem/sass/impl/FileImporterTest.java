@@ -1,24 +1,18 @@
 package com.github.mickleroy.aem.sass.impl;
 
-
 import com.adobe.granite.ui.clientlibs.script.CompilerContext;
 import com.adobe.granite.ui.clientlibs.script.ScriptResource;
 import com.adobe.granite.ui.clientlibs.script.ScriptResourceProvider;
 import com.github.mickleroy.aem.sass.exceptions.ImportFileNotFoundException;
 import io.bit3.jsass.importer.Import;
 import io.bit3.jsass.importer.Importer;
-import io.wcm.testing.mock.aem.junit5.AemContext;
-import io.wcm.testing.mock.aem.junit5.AemContextExtension;
-import junitx.framework.Assert;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.CharEncoding;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
@@ -30,11 +24,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
 
-import static junitx.framework.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static junitx.framework.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
